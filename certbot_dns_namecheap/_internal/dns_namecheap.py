@@ -29,6 +29,9 @@ class Authenticator(dns_common_lexicon.LexiconDNSAuthenticator):
         self._add_provider_option('token',
                                   f'API token for Namecheap account, obtained from {API_URL}',
                                   'auth_token')
+        self._add_provider_option('clientip',
+                                  f'Whitelisted ClientIp for Namecheap account',
+                                  'auth_clientip')
 
     @classmethod
     def add_parser_arguments(cls, add: Callable[..., None],
